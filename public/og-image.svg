@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f4f4f0"/>
+
+  <circle cx="1040" cy="150" r="260" fill="#ff4b1f"/>
+  <circle cx="960" cy="70" r="170" fill="none" stroke="#11111126" stroke-width="2"/>
+
+  <text x="90" y="180" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="56" fill="#111111">Landify<tspan fill="#ff4b1f">.</tspan></text>
+
+  <text x="90" y="300" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="64" fill="#111111">
+    <tspan x="90" dy="0">Votre croissance</tspan>
+    <tspan x="90" dy="74">digitale, conçue</tspan>
+    <tspan x="90" dy="74">pour convertir.</tspan>
+  </text>
+
+  <text x="90" y="580" font-family="Arial, Helvetica, sans-serif" font-weight="600" font-size="26" fill="#555555">Landing pages, sites de vente et assistants IA</text>
+</svg>

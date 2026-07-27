@@ -1,7 +1,10 @@
+import { Fragment } from "react";
+import Reveal from "./Reveal";
+
 const steps = [
   {
     number: "01",
-    title: "Écoute & Analyse",
+    title: "Écoute & analyse",
     desc: "Analyse de votre marché et définition d'une stratégie gagnante.",
   },
   {
@@ -12,47 +15,41 @@ const steps = [
   {
     number: "03",
     title: "Tests",
-    desc: "Itérations, retours et optimisations pour un produit parfait.",
+    desc: "Itérations, retours et optimisations pour un produit fiable.",
   },
   {
     number: "04",
     title: "Livraison",
     desc: "Mise en production, formation et accompagnement continu.",
-  }
+  },
 ];
 
 export default function Process() {
   return (
-    <section id="process" className="relative px-6 py-48 border-b structural-line bg-brand-bg overflow-hidden">
-      <div className="mx-auto max-w-7xl flex flex-col lg:flex-row gap-12 lg:gap-20">
-        
-        {/* Left Side Label */}
-        <div className="lg:w-48 flex-shrink-0 relative">
-          <h2 className="text-xl font-bold tracking-[0.2em] text-brand-dark/40 lg:-rotate-90 origin-top-left lg:absolute lg:top-32 lg:left-0 whitespace-nowrap">
-            ( TIMELINE )
-          </h2>
-          <h2 className="text-4xl font-bold text-brand-dark mb-8 lg:mb-0 lg:ml-12">Process</h2>
-        </div>
+    <section id="process" className="relative px-6 py-32 border-b structural-line bg-brand-bg">
+      <Reveal className="mx-auto max-w-7xl">
+        <h2 className="mb-16 text-4xl font-bold tracking-tight text-brand-dark">Process</h2>
 
-        {/* Right Side Timeline */}
-        <div className="flex-1 relative">
-          {/* Connecting Line */}
-          <div className="absolute top-1/2 left-0 right-0 h-px bg-brand-dark/20 -translate-y-1/2 hidden md:block" />
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {steps.map((step, index) => (
-              <div key={step.number} className={`relative flex flex-col items-center text-center ${index % 2 !== 0 ? 'md:mt-32' : 'md:mb-32'}`}>
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-brand-bg border-2 border-brand-dark text-xl font-black text-brand-dark z-10 hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-colors cursor-default">
-                  {step.number}
-                </div>
-                <h3 className="mb-3 text-lg font-extrabold text-brand-dark">{step.title}</h3>
-                <p className="text-sm font-medium text-brand-gray">{step.desc}</p>
+        <div className="flex flex-col md:flex-row md:items-start gap-12 md:gap-0">
+          {steps.map((step, index) => (
+            <Fragment key={step.number}>
+              <div className="md:flex-1 md:pr-8">
+                <span className="mb-4 block text-5xl font-light text-brand-orange">{step.number}</span>
+                <h3 className="mb-2 text-lg font-extrabold text-brand-dark">{step.title}</h3>
+                <p className="max-w-[32ch] text-sm font-medium text-brand-gray">{step.desc}</p>
               </div>
-            ))}
-          </div>
-        </div>
 
-      </div>
+              {index < steps.length - 1 && (
+                <div className="hidden md:flex items-start justify-center pt-3 px-4 text-brand-dark/15">
+                  <svg className="h-5 w-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              )}
+            </Fragment>
+          ))}
+        </div>
+      </Reveal>
     </section>
   );
 }

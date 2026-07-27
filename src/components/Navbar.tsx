@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/#about" },
+  { label: "Accueil", href: "/" },
+  { label: "À propos", href: "/#about" },
   { label: "Services", href: "/#services" },
   { label: "Process", href: "/#process" },
-  { label: "Work", href: "/#projects" },
+  { label: "Réalisations", href: "/#projects" },
 ];
 
 export default function Navbar() {
@@ -25,8 +25,8 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-brand-bg/90 backdrop-blur-md border-b structural-line">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-        <Link to="/" className="text-3xl font-extrabold tracking-tight text-brand-dark">
-          alex<span className="text-brand-orange">.</span>
+        <Link to="/" className="text-2xl font-extrabold tracking-tight text-brand-dark">
+          Landify<span className="text-brand-orange">.</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
@@ -44,7 +44,7 @@ export default function Navbar() {
             to="/booking"
             className="rounded-full bg-brand-orange px-6 py-2.5 text-sm font-bold text-white transition-transform hover:scale-105 shadow-md shadow-brand-orange/20"
           >
-            Book a Call
+            Réserver un appel
           </Link>
         </div>
 
@@ -76,7 +76,7 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
             className="mt-2 rounded-full bg-brand-orange px-5 py-3 text-center text-sm font-bold text-white"
           >
-            Book a Call
+            Réserver un appel
           </Link>
         </div>
       )}

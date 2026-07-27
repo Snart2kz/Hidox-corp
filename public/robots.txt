@@ -1,0 +1,5 @@
+# À confirmer : landify.co est un nom de domaine placeholder, à remplacer par le vrai domaine.
+User-agent: *
+Allow: /
+
+Sitemap: https://landify.co/sitemap.xml

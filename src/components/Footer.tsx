@@ -1,20 +1,20 @@
 import { Link } from "react-router-dom";
 
 const footerLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/#about" },
+  { label: "Accueil", href: "/" },
+  { label: "À propos", href: "/#about" },
   { label: "Services", href: "/#services" },
   { label: "Process", href: "/#process" },
-  { label: "Work", href: "/#projects" },
+  { label: "Réalisations", href: "/#projects" },
 ];
 
 export default function Footer() {
   return (
     <footer className="bg-brand-dark px-6 py-8 border-t border-[#333]">
       <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6">
-        
+
         <Link to="/" className="text-2xl font-extrabold tracking-tight text-white">
-          alex<span className="text-brand-orange">.</span>
+          Landify<span className="text-brand-orange">.</span>
         </Link>
 
         <div className="flex flex-wrap items-center justify-center gap-6">
@@ -25,8 +25,11 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="text-xs text-gray-500">
-          PortfolioPreview.jsx <span className="ml-4">Fine hairline rules</span>
+        <div className="flex items-center gap-4 text-xs text-gray-500">
+          <span>© {new Date().getFullYear()} Landify. Tous droits réservés.</span>
+          <Link to="/mentions-legales" className="hover:text-white transition-colors">
+            Mentions légales
+          </Link>
         </div>
 
       </div>
